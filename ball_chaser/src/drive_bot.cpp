@@ -26,7 +26,7 @@ bool handle_drive_request_callback(ball_chaser::DriveToTarget::Request &req,
     motor_command_publisher.publish(twist_cmd);
 
     // Append the feedback message to service response
-    res.msg_feedback = "Received twist command:: linear_x=" + std::to_string(req.linear_x) + " angular_z="
+    res.msg_feedback = "Received twist command: linear_x=" + std::to_string(req.linear_x) + " angular_z="
                     + std::to_string(req.angular_z); 
                     
 
