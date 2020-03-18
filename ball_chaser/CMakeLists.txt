@@ -216,3 +216,8 @@ add_dependencies(drive_bot ball_chaser_generate_messages_cpp)
 add_executable(process_image src/process_image.cpp)
 target_link_libraries(process_image ${catkin_LIBRARIES})
 add_dependencies(process_image ball_chaser_generate_messages_cpp)
+
+# Process image PID
+add_executable(process_image_pid src/process_image_pid.cpp src/pid_controller.cpp)
+target_link_libraries(process_image_pid ${catkin_LIBRARIES})
+add_dependencies(process_image_pid ball_chaser_generate_messages_cpp)
